@@ -10,7 +10,7 @@ const router = express.Router();
 const upload = multer({ dest: "uploads/" });
 
 router.get("/esign-pdf", (req, res) => {
-  res.render("esign"); // Ensure this ejs file exists in your views directory
+  res.render("esign"); // Ensure this ejs file exists in your views
 });
 
 router.post("/esign", upload.single("pdfFile"), async (req, res) => {
