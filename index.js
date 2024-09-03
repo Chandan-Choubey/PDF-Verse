@@ -17,6 +17,7 @@ const pdfToTiff = require("./routes/pdf-to-tiff");
 const pdfToTxt = require("./routes/pdf-to-txt");
 const wordToPdf = require("./routes/word-to-pdf");
 const compressPdf = require("./routes/compress");
+const esign = require("./routes/esign");
 const cors = require("cors");
 
 const app = express();
@@ -46,6 +47,7 @@ app.use(pdfToTiff);
 app.use(pdfToTxt);
 app.use(wordToPdf);
 app.use(compressPdf);
+app.use(esign);
 app.use(express.static(path.join(__dirname, "public")));
 
 app.listen(8080, () => {
